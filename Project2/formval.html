@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="login-form">
+        <h2>Login Form</h2>
+        <input type="email" id="email" placeholder="Email">
+        <div class="message" id="email-error">Email is required</div>
+        <input type="password" id="password" placeholder="Password">
+        <div class="message" id="password-error">Password must be at least 8 characters</div>
+        <input type="tel" id="phone" placeholder="Phone Number">
+        <div class="message" id="phone-error">Phone number is required</div>
+        <button onclick="validateForm()">Login</button>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

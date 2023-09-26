@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        /* Stylish CSS for the login form */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('pexels-johannes-plenio-1103970.jpg'); /* Add the URL to your background image */
+            background-size: cover;
+            background-color: #2c87ff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-form {
+            background-color: #fff;
+            border-radius: 10px;
+            background: rgb(255, 255, 255); /* Fallback for older browsers without RGBA-support */
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 320px;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .login-form:hover {
+            transform: scale(1.02); /* Add a subtle hover effect */
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        input[type="email"], input[type="password"], input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            border: none;
+            border-bottom: 2px solid #3498db;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus {
+            border-color: #3498db; /* Change border color on focus */
+        }
+
+        .message {
+            display: none;
+            font-size: 14px;
+            color: #e74c3c;
+            margin-top: -10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #86a5ba;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9; /* Darker background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-form">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email">
+        <div class="message" id="email-error">Email is required</div>
+        <input type="password" id="password" placeholder="Password">
+        <div class="message" id="password-error">Password must be at least 8 characters</div>
+        <input type="tel" id="phone" placeholder="Phone Number">
+        <div class="message" id="phone-error">Correct Phone number is required</div>
+        <button onclick="validateForm()">Login</button>
+    </div>
+
+    <script>
+        // JavaScript functions
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const phone = document.getElementById('phone').value;
+            const emailError = document.getElementById('email-error');
+            const passwordError = document.getElementById('password-error');
+            const phoneError = document.getElementById('phone-error');
+
+            // Reset error messages
+            emailError.style.display = 'none';
+            passwordError.style.display = 'none';
+            phoneError.style.display = 'none';
+
+            // Email validation
+            if (!email && !isValidEmail(email)) {
+                emailError.style.display = 'block';
+                alert('Wrong email');
+                return;
+            }
+
+            // Password validation (at least 8 characters)
+            if (password.length < 8) {
+                passwordError.style.display = 'block';
+                return;
+            }
+
+            // Phone number validation
+            if (!phone || isNaN(phone) || phone.length !== 10) {
+                phoneError.style.display = 'block';
+                return;
+            }
+
+            // Form is valid; you can add your login logic here
+            alert('Login successful!');
+        }
+        function isValidEmail(email) {
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(email);
+            }
+    </script>
+</body>
+</html>
