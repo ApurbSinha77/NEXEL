@@ -1,0 +1,278 @@
+
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold";
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* Headings */
+
+.cardi{
+  width:100%;
+  height:50%;
+}
+.box{
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  background-clip:padding-box;
+}
+
+.big-heading {
+  font-family: "Montserrat-Black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+  margin-top: 3rem;
+}
+
+.section-heading {
+  font-size: 5rem;
+  line-height: 1.5;
+}
+
+/* Containers */
+
+.container-fluid{
+  padding: 7% 15%;
+}
+
+/* Sections */
+@keyframes rot{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(359deg);
+  }
+}
+.colored-section {
+  background-color: #336CD5;
+  z-index:-2;
+  color: #fff;
+  background-image: url(/images/NicePng_spinning-png_2991379.png);
+
+}
+/* .imgmain{
+  z-index:-1;
+  width:100%;
+  overflow: hidden;
+  object-fit:fill;
+  animation: rot 15s infinite linear;
+  position:absolute;
+} */
+
+
+.white-section {
+  background-color: #fff;
+  z-index:2;
+}
+
+/* Navigation Bar */
+
+.navbar {
+  padding: 0 0 2rem;
+  border-bottom: solid;
+  position: static;
+}
+
+.navbar-brand {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 3.5rem;
+  font-weight:normal;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";
+}
+
+/* Buttons */
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* Title Section */
+
+#title {
+  background-color: #336CD5;
+  color: #fff;
+  text-align: left;
+}
+
+#title .container-fluid {
+  padding: 3% 15% 0;
+}
+
+.card-title{
+  color: black;
+}
+
+.card-body{
+  margin-bottom: 1.5rem;
+}
+.card{
+  padding: 4% 7%;
+}
+
+/* Title Image */
+
+.title-image {
+  width: 85%;
+  transform: rotate(0);
+  position: absolute;
+  right: 20%;
+  margin-bottom: 0;
+}
+.row{
+  margin-bottom: 0;
+}
+/* @keyframes mainjump {
+  0%{
+    top:0;
+    font-size: 2rem;
+  }
+  100%{
+    top:390px;
+    font-size: 3.5rem;
+  }
+} */
+/* .mainImg .text{
+  position:absolute;
+  font-family: Montserrat;
+  display: block;
+  top:0;
+  left:100px;
+  opacity:0;
+}
+.title-image:hover {
+  animation-name: mainimation;
+  animation-duration: 1s;
+} */
+/* .mainImg:hover .text{
+  opacity:1;
+  animation-name: mainjump;
+  animation-duration: 1s;
+} */
+
+/* Features Section */
+
+#features {
+  position: relative;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-box {
+  padding: 4.5%;
+}
+
+.icon {
+  color: #394458;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #9BB5E5;
+}
+
+/* Testimonial Section */
+
+#testimonials {
+  background-color: #394458;
+  border-bottom: solid;
+}
+
+.testimonial-text {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+  background-color: #FFFFFF;
+}
+
+
+#press {
+  background-color: #394458;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Pricing Section */
+
+#about {
+  padding: 100px;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+/* CTA Section */
+
+
+/* Footer Section */
+
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+@media (max-width: 1028px) {
+
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    align-self: center;
+    position: static;
+    margin-bottom: 0;
+    margin-top:auto;
+  }
+}
+@media (min-width: 1028px) {
+
+  .title-image {
+    align-self: center;
+    position: static;
+    margin-bottom: 0;
+    margin-top:auto;
+  }
+}
+/* @media all and (min-width:990) and (max-width:1190)
+{
+  .title-image{
+    bottom:0;
+  }
+} */
+.mainImg{
+  margin-top: auto;
+  margin-bottom: 0px;
+  position:static;
+}
